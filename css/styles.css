@@ -4,8 +4,8 @@
   --text:#f3f4f6;
   --muted:#c9cbd3;
   --line:rgba(255,255,255,.10);
-  --accent:#c62828;    /* Cooper red */
-  --accent2:#1f5a94;   /* Cooper blue */
+  --accent:#c62828;
+  --accent2:#1f5a94;
   --white:#ffffff;
 }
 
@@ -16,7 +16,6 @@ img{max-width:100%;display:block}
 
 .container{width:min(1100px,92vw);margin:0 auto}
 
-/* Buttons */
 .btn{
   display:inline-flex;align-items:center;justify-content:center;
   padding:12px 18px;border-radius:10px;border:1px solid transparent;
@@ -30,7 +29,6 @@ img{max-width:100%;display:block}
 .btn--full{width:100%}
 .btn__emph{margin-left:6px}
 
-/* Topbar */
 .topbar{
   position:sticky;top:0;z-index:50;
   background:rgba(5,5,7,.75);
@@ -44,7 +42,6 @@ img{max-width:100%;display:block}
 .brand__name{font-weight:900;line-height:1}
 .brand__sub{font-weight:800;font-size:12px;color:var(--accent2);letter-spacing:.8px}
 
-/* Hero */
 .hero{
   position:relative;
   min-height:420px;
@@ -60,7 +57,6 @@ img{max-width:100%;display:block}
 .hero__sub{max-width:560px;color:var(--muted);font-weight:600;font-size:16px;margin:0 0 18px}
 .hero__cta{display:flex;gap:12px;flex-wrap:wrap}
 
-/* Trust section */
 .trust{background:#f7f7fb;color:#101114}
 .trust__grid{padding:42px 0;display:grid;grid-template-columns:1.1fr 1.4fr;gap:26px;align-items:center}
 .trust h2{margin:0 0 10px;font-size:36px;line-height:1.05}
@@ -84,7 +80,6 @@ img{max-width:100%;display:block}
 .trustcard__title{font-weight:900;color:#101114;margin-bottom:3px}
 .trustcard__text{color:#404452;font-weight:600;font-size:13px;line-height:1.25}
 
-/* Choose section */
 .choose{
   position:relative;
   background-size:cover;background-position:center;
@@ -112,7 +107,6 @@ img{max-width:100%;display:block}
 .bullet{display:flex;gap:8px;align-items:center}
 .choose__cta{margin-top:22px}
 
-/* Proof + Testimonial */
 .proof{background:#ffffff;color:#121217}
 .proof__grid{padding:46px 0;display:grid;grid-template-columns:1.1fr 1fr;gap:24px;align-items:center}
 .proof h2{margin:0 0 12px;font-size:36px;line-height:1.1}
@@ -149,7 +143,6 @@ img{max-width:100%;display:block}
 .testimonial__text{color:#2e313a;font-weight:650;margin:8px 0 12px;line-height:1.35}
 .testimonial__media img{border-radius:14px;border:1px solid rgba(0,0,0,.08)}
 
-/* Services */
 .services{background:var(--bg)}
 .services__title{margin:0;padding:52px 0 22px;text-align:center;font-size:40px;letter-spacing:-.8px}
 .servicegrid{
@@ -175,7 +168,6 @@ img{max-width:100%;display:block}
   font-weight:800;color:rgba(255,255,255,.88);
 }
 
-/* Quote section */
 .quote{background:#0f1015;border-top:1px solid rgba(255,255,255,.08)}
 .quote__grid{padding:48px 0;display:grid;grid-template-columns:1.1fr 1fr;gap:22px;align-items:flex-start}
 .quote h2{margin:0 0 10px;font-size:36px}
@@ -205,7 +197,6 @@ input,select,textarea{
 input:focus,select:focus,textarea:focus{border-color:rgba(198,40,40,.55)}
 .form__fineprint{margin:10px 0 0;color:rgba(255,255,255,.70);font-weight:650;font-size:12px}
 
-/* Sticky call */
 .stickycall{
   position:fixed;left:14px;right:14px;bottom:14px;z-index:60;
   display:flex;align-items:center;justify-content:center;gap:10px;
@@ -218,7 +209,6 @@ input:focus,select:focus,textarea:focus{border-color:rgba(198,40,40,.55)}
 }
 .stickycall span{opacity:.95}
 
-/* Responsive */
 @media (max-width: 960px){
   .trust__grid,.proof__grid,.quote__grid{grid-template-columns:1fr}
   .servicegrid{grid-template-columns:repeat(2,minmax(0,1fr))}
@@ -230,7 +220,5 @@ input:focus,select:focus,textarea:focus{border-color:rgba(198,40,40,.55)}
   .btn--call{display:none}
 }
 
-
-/* Booking form two-column rows */
 .form__row{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
 @media (max-width:720px){.form__row{grid-template-columns:1fr;}}

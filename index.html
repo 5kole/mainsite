@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Cooper Electrical | Charlotte Electrician</title>
   
-<!-- FAVICON -->
 <link rel="icon" href="assets/favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
@@ -17,17 +16,14 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/styles.css" />
 
-<!-- Google Analytics (GA4) + Google Ads Conversion Tracking -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-20FZJEFL5V"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag("js", new Date());
 
-  // Google Analytics 4
   gtag("config", "G-20FZJEFL5V", { anonymize_ip: true });
 
-  // Google Ads conversion tracking (phone calls)
   gtag('config', 'AW-17992897776/h35oCJ_-kaccEPCp14ND', {
     'phone_conversion_number': '(704) 609-0965'
   });
@@ -35,7 +31,6 @@
 </head>
 
 <body>
-  <!-- Top Bar -->
   <header class="topbar">
     <div class="container topbar__inner">
       <div class="brand">
@@ -52,7 +47,6 @@
     </div>
   </header>
 
-  <!-- HERO -->
   <section class="hero" style="background-image:url('assets/hero.webp');">
     <div class="hero__overlay"></div>
 
@@ -69,7 +63,6 @@
     </div>
   </section>
 
-  <!-- TRUST STRIP -->
   <section class="trust">
     <div class="container trust__grid">
       <div class="trust__left">
@@ -113,7 +106,6 @@
     </div>
   </section>
 
-  <!-- CHOOSE A SERVICE -->
   <section class="choose" style="background-image:url('assets/tech-outlet.webp');">
     <div class="choose__overlay"></div>
 
@@ -139,7 +131,6 @@
     </div>
   </section>
 
-  <!-- TRUSTED BY -->
   <section class="proof">
     <div class="container proof__grid">
       <div class="proof__left">
@@ -171,7 +162,6 @@
     </div>
   </section>
 
-  <!-- SERVICES -->
   <section class="services">
     <div class="container">
       <h2 class="services__title">Our Electrical <span class="accent">Services</span><br/>We Handle It All</h2>
@@ -219,7 +209,6 @@
     </div>
   </section>
 
-  <!-- QUOTE FORM -->
   <section class="quote" id="quote">
     <div class="container quote__grid">
       <div>
@@ -266,12 +255,10 @@
     </div>
   </section>
 
-  <!-- Sticky Call Bar -->
   <a class="stickycall" href="tel:7046090965">
     Call Now <span>(704) 609-0965</span>
   </a>
 
-  <!-- Firestore lead capture (client-side) -->
   <script type="module">
     import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-app.js";
     import {
@@ -281,23 +268,18 @@
       serverTimestamp,
     } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-firestore.js";
 
-    // IMPORTANT:
-    // - Make sure Firestore is enabled in the Firebase console.
-    // - Your Firestore rules must allow writes for this to work.
-    //   (For production, protect this via reCAPTCHA + Cloud Function.)
     const firebaseConfig = {
       apiKey: "AIzaSyBa40nqAxDMnQQhgMBCmD8rEirm8rHEuno",
       authDomain: "cooper-electrical.firebaseapp.com",
       projectId: "cooper-electrical",
       storageBucket: "cooper-electrical.appspot.com",
-      messagingSenderId: "783645377294", // <-- replace with real value
-      appId: "1:783645377294:web:c37a3628b6d6ae51144d5f", // <-- replace with real value
+      messagingSenderId: "783645377294",
+      appId: "1:783645377294:web:c37a3628b6d6ae51144d5f",
     };
 
     const app = initializeApp(firebaseConfig);
     const db = getFirestore(app);
 
-    // When clicking service pills, auto-fill service dropdown
     const pills = document.querySelectorAll('.pill');
     const serviceSelect = document.getElementById('serviceSelect');
     const serviceField = document.getElementById('serviceField');
@@ -309,7 +291,6 @@
       });
     });
 
-    // Add a lightweight status line under the form button
     const form = document.getElementById('leadForm');
     const submitBtn = form?.querySelector('button[type="submit"]');
     const fineprint = form?.querySelector('.form__fineprint');
