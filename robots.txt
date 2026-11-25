@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://cooper-electrical-nc.com/sitemap.xml
